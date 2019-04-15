@@ -16,9 +16,8 @@
         "localBuildDirectory": "../JavaWorker/build/",
         "command": "java",
         "arguments": [
-            "-cp",
-            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
-            "com.javaworker.JavaWorker",
+            "-jar",
+            "build/libs/JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
@@ -30,9 +29,8 @@
         "localBuildDirectory": "../JavaWorker/build/",
         "command": "java",
         "arguments": [
-            "-cp",
-            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
-            "com.javaworker.JavaWorker",
+            "-jar",
+            "build/libs/JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
@@ -42,9 +40,8 @@
         "localBuildDirectory": "../JavaWorker/build/",
         "command": "java",
         "arguments": [
-            "-cp",
-            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
-            "com.javaworker.JavaWorker",
+            "-jar",
+            "build/libs/JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
@@ -54,9 +51,8 @@
         "localBuildDirectory": "../JavaWorker/build/",
         "command": "java",
         "arguments": [
-            "-cp",
-            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
-            "com.javaworker.JavaWorker",
+            "-jar",
+            "build/libs/JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
