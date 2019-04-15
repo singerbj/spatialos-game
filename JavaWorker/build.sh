@@ -10,7 +10,7 @@ if [ ! -d "lib" ]; then
   ../SpatialOS/scripts/download_dependencies.sh
 fi
 
-./gradlew jar
+./gradlew buildJar
 if [ $? -ne 0 ]; then
     echo "========================="
     echo "JavaWorker Build FAIL!!!!"

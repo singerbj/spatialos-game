@@ -1,9 +1,11 @@
 apply plugin: 'java'
-// apply plugin: 'java-library-distribution'
+apply plugin: 'eclipse'
+
+version = '1.0'
 
 repositories {
-    // jcenter()
-    // mavenCentral()
+    jcenter()
+    mavenCentral()
     flatDir {
         dirs 'lib/improbable/sdk/13.5.1/java/'
     }
@@ -15,14 +17,14 @@ dependencies {
     compile name: 'java-worker-sdk'
 }
 
-// distZip.shouldRunAfter(build)
-
-// jar {
-//     // Keep jar clean:
-//     exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
-//
-//     manifest {
-//         attributes 'Main-Class': 'com.javaworker.Javaworker',
-//                    'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
-//     }
-// }
+//create a single Jar with all dependencies
+task buildJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'JavaWorker',
+        	       'Implementation-Version': version,
+        	       'Main-Class': 'com.javaworker.JavaWorker'
+    }
+    baseName = project.name
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
