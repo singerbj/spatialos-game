@@ -27,7 +27,7 @@ namespace Demo
             new EntityId(2)
         };
 
-        private static readonly string[] WorkerAttributes = {"dice", "greetings"};
+        private static readonly string[] WorkerAttributes = {"java", "greetings"};
 
         static int Main(string[] arguments)
         {
@@ -159,7 +159,7 @@ namespace Demo
                 var workerType = response.Response.Value.Get().Value.workerType;
                 var workerMessage = response.Response.Value.Get().Value.workerMessage;
                 var logMessage = String.Format("New Response: {0} says \"{1}\"", workerType, workerMessage);
-              
+
                 Console.WriteLine(logMessage);
                 connection.SendLogMessage(LogLevel.Info, LoggerName, logMessage);
             }

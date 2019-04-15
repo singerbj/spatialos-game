@@ -7,7 +7,7 @@ pushd "$( dirname "${BASH_SOURCE[0]}" )"
 
 SDK_VERSION="13.5.1"
 
-WORKER_DIRS=("$(pwd)/../../HelloWorker" "$(pwd)/../../DiceWorker" "$(pwd)/../../client")
+WORKER_DIRS=("$(pwd)/../../HelloWorker" "$(pwd)/../../JavaWorker" "$(pwd)/../../client")
 TOOLS_DIR="$(pwd)/../tools/${SDK_VERSION}"
 LIB_DIR="$(pwd)/../lib/${SDK_VERSION}"
 SCHEMA_DIR="$(pwd)/../schema"

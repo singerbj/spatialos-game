@@ -1,0 +1,67 @@
+{
+  "workerType": "JavaWorker",
+  "layer": "java",
+  "entityInterest": {
+    "rangeEntityInterest": {
+      "radius": 2
+    }
+  },
+  "componentDelivery": {
+    "default": "RELIABLE_ORDERED",
+    "checkoutAllInitially": true
+  },
+  "launchConfiguration": {
+    "cloudDeployment": {
+      "linux": {
+        "localBuildDirectory": "../JavaWorker/build/",
+        "command": "java",
+        "arguments": [
+            "-cp",
+            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
+            "com.javaworker.JavaWorker",
+            "${IMPROBABLE_RECEPTIONIST_HOST}",
+            "${IMPROBABLE_RECEPTIONIST_PORT}",
+            "${IMPROBABLE_WORKER_ID}"
+        ]
+      }
+    },
+    "localDeployment": {
+      "windows": {
+        "localBuildDirectory": "../JavaWorker/build/",
+        "command": "java",
+        "arguments": [
+            "-cp",
+            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
+            "com.javaworker.JavaWorker",
+            "${IMPROBABLE_RECEPTIONIST_HOST}",
+            "${IMPROBABLE_RECEPTIONIST_PORT}",
+            "${IMPROBABLE_WORKER_ID}"
+        ]
+      },
+      "macos": {
+        "localBuildDirectory": "../JavaWorker/build/",
+        "command": "java",
+        "arguments": [
+            "-cp",
+            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
+            "com.javaworker.JavaWorker",
+            "${IMPROBABLE_RECEPTIONIST_HOST}",
+            "${IMPROBABLE_RECEPTIONIST_PORT}",
+            "${IMPROBABLE_WORKER_ID}"
+        ]
+      },
+      "linux": {
+        "localBuildDirectory": "../JavaWorker/build/",
+        "command": "java",
+        "arguments": [
+            "-cp",
+            "build/libs/JavaWorker.jar:lib/improbable/sdk/13.5.1/java/java-worker-sdk.jar",
+            "com.javaworker.JavaWorker",
+            "${IMPROBABLE_RECEPTIONIST_HOST}",
+            "${IMPROBABLE_RECEPTIONIST_PORT}",
+            "${IMPROBABLE_WORKER_ID}"
+        ]
+      }
+    }
+  }
+}

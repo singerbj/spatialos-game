@@ -7,7 +7,7 @@
   "loadBalancing": {
     "layerConfigurations": [
       {
-        "layer": "dice",
+        "layer": "java",
         "hexGrid": {
           "numWorkers": 2
         }

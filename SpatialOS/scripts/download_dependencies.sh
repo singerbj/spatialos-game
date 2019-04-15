@@ -30,6 +30,7 @@ popd
 
 mkdir -p "${LIB_DIR}"
 pushd "${LIB_DIR}"
+retrievePackage "worker_sdk" "java" "java"
 retrievePackage "worker_sdk" "csharp" "csharp"
 retrievePackage "worker_sdk" "core-dynamic-x86_64-win32" "win64"
 retrievePackage "worker_sdk" "core-dynamic-x86_64-macos" "macos64"

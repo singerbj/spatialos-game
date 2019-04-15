@@ -15,7 +15,3 @@ client/src/improbable/generated
 HelloWorker/bin/
 HelloWorker/lib/
 HelloWorker/src/improbable/generated
-
-DiceWorker/bin/
-DiceWorker/lib/
-DiceWorker/src/improbable/generated
