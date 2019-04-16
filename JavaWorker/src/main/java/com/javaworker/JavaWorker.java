@@ -1,25 +1,16 @@
 package com.javaworker;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 import improbable.worker.*;
-import improbable.common.*;
-import improbable.collections.*;
 
 public class JavaWorker {
 	private static final int FRAMES_PER_SECOND = 60;
 
 	public static void main(String[] args) {
 		if(args.length > 0){
-			Connection connection = getConnection(args[0], args[1], Integer.parseInt(args[2]));
+			for(String arg : args){
+				System.out.println(arg);
+			}
+			Connection connection = getConnection(args[1], args[0], Integer.parseInt(args[1]));
 		} else {
 			System.out.println("No args passed. Exiting...");
 			System.exit(1);

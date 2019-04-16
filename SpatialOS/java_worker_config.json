@@ -13,11 +13,11 @@
   "launchConfiguration": {
     "cloudDeployment": {
       "linux": {
-        "localBuildDirectory": "../JavaWorker/build/",
+        "localBuildDirectory": "../JavaWorker/build/libslibs",
         "command": "java",
         "arguments": [
             "-jar",
-            "build/libs/JavaWorker.jar",
+            "JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
@@ -26,33 +26,33 @@
     },
     "localDeployment": {
       "windows": {
-        "localBuildDirectory": "../JavaWorker/build/",
+        "localBuildDirectory": "../JavaWorker/build/libs",
         "command": "java",
         "arguments": [
             "-jar",
-            "build/libs/JavaWorker.jar",
+            "JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
         ]
       },
       "macos": {
-        "localBuildDirectory": "../JavaWorker/build/",
+        "localBuildDirectory": "../JavaWorker/build/libs",
         "command": "java",
         "arguments": [
             "-jar",
-            "build/libs/JavaWorker.jar",
+            "JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"
         ]
       },
       "linux": {
-        "localBuildDirectory": "../JavaWorker/build/",
+        "localBuildDirectory": "../JavaWorker/build/libs",
         "command": "java",
         "arguments": [
             "-jar",
-            "build/libs/JavaWorker.jar",
+            "JavaWorker.jar",
             "${IMPROBABLE_RECEPTIONIST_HOST}",
             "${IMPROBABLE_RECEPTIONIST_PORT}",
             "${IMPROBABLE_WORKER_ID}"

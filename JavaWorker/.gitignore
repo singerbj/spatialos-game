@@ -1,3 +1,6 @@
 .gradle/**/*
 lib/**/*
 build/**/*
+/.gradle/
+/build/
+/bin/
