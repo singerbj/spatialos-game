@@ -6,9 +6,7 @@ echo "Building JavaWorker......"
 echo "========================="
 
 # Download the dependenties in case they are not present
-if [ ! -d "lib" ]; then
-  ../SpatialOS/scripts/download_dependencies.sh
-fi
+../SpatialOS/scripts/download_dependencies.sh
 
 ./gradlew buildJar
 if [ $? -ne 0 ]; then

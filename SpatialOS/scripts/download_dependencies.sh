@@ -11,7 +11,17 @@ retrievePackage() {
   PACKAGE=$2
   TARGETDIR=$3
   if [ ! -d "${TARGETDIR}" ]; then
+    echo '========================================='
+    echo "TYPE=${TYPE}"
+    echo "PACKAGE=${PACKAGE}"
+    echo "SDK_VERSION=${SDK_VERSION}"
+    echo "TARGETDIR=${TARGETDIR}"
+    echo '========================================='
+    echo 'package get --force --unzip "${TYPE}" "${PACKAGE}" "${SDK_VERSION}" "${TARGETDIR}"'
     spatial package get --force --unzip "${TYPE}" "${PACKAGE}" "${SDK_VERSION}" "${TARGETDIR}"
+    echo '========================================='
+    echo '========================================='
+    echo '========================================='
   fi
 }
 
@@ -32,9 +42,12 @@ mkdir -p "${LIB_DIR}"
 pushd "${LIB_DIR}"
 retrievePackage "worker_sdk" "java" "java"
 retrievePackage "worker_sdk" "csharp" "csharp"
-retrievePackage "worker_sdk" "core-dynamic-x86_64-win32" "win64"
-retrievePackage "worker_sdk" "core-dynamic-x86_64-macos" "macos64"
-retrievePackage "worker_sdk" "core-dynamic-x86_64-linux" "linux64"
+retrievePackage "worker_sdk" "core-dynamic-x86_64-win32" "core-dynamic-win64"
+retrievePackage "worker_sdk" "core-dynamic-x86_64-macos" "core-dynamic-macos64"
+retrievePackage "worker_sdk" "core-dynamic-x86_64-linux" "core-dynamic-linux64"
+retrievePackage "worker_sdk" "java_native-dynamic-x86_64-win32" "java_native-dynamic-win64"
+retrievePackage "worker_sdk" "java_native-dynamic-x86_64-macos" "java_native-dynamic-macos64"
+retrievePackage "worker_sdk" "java_native-dynamic-x86_64-linux" "java_native-dynamic-linux64"
 
 # Move the Worker SDK libraries into the lib folder of each worker project
 for WORKER_DIR in "${WORKER_DIRS[@]}"; do

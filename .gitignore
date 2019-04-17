@@ -15,4 +15,9 @@ client/src/improbable/generated
 HelloWorker/bin/
 HelloWorker/lib/
 HelloWorker/src/improbable/generated
+
+JavaWorker/build/
+JavaWorker/lib/
+JavaWorker/src/improbable/generated
+
 /.gradle/
