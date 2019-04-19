@@ -18,6 +18,6 @@ HelloWorker/src/improbable/generated
 
 JavaWorker/build/
 JavaWorker/lib/
-JavaWorker/src/improbable/generated
+JavaWorker/src/generated
 
 /.gradle/

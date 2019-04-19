@@ -25,6 +25,16 @@ clean {
     delete 'lib/'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+            srcDir 'src/generated/java'
+        }
+    }
+}
+
+
 //create a single Jar with all dependencies
 task buildJar(type: Jar) {
 	manifest {
