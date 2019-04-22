@@ -5,10 +5,10 @@ repositories {
     jcenter()
     mavenCentral()
     flatDir {
-        dirs 'lib/improbable/sdk/13.5.1/java/',
-             'lib/improbable/sdk/13.5.1/java_native-dynamic-win64/',
-             'lib/improbable/sdk/13.5.1/java_native-dynamic-macos64/',
-             'lib/improbable/sdk/13.5.1/java_native-dynamic-linux64/'
+        dirs 'lib/improbable/sdk/13.7.0/java/',
+             'lib/improbable/sdk/13.7.0/java_native-dynamic-win64/',
+             'lib/improbable/sdk/13.7.0/java_native-dynamic-macos64/',
+             'lib/improbable/sdk/13.7.0/java_native-dynamic-linux64/'
     }
 }
 

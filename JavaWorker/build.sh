@@ -14,7 +14,7 @@ mkdir -p "${OUT_DIR}"
 
 
 # Why the f arent these set anymore?
-SDK_VERSION="13.5.1"
+SDK_VERSION="13.7.0"
 TOOLS_DIR="$(pwd)/../SpatialOS/tools/${SDK_VERSION}"
 SCHEMA_DIR="$(pwd)/../SpatialOS/schema"
 

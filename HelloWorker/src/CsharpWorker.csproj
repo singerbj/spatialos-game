@@ -16,8 +16,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Improbable.WorkerSdkCsharp, Version=13.5.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\lib\improbable\sdk\13.5.1\csharp\Improbable.WorkerSdkCsharp.dll</HintPath>
+    <Reference Include="Improbable.WorkerSdkCsharp, Version=13.7.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\lib\improbable\sdk\13.7.0\csharp\Improbable.WorkerSdkCsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -25,19 +25,19 @@
     <Compile Include="HelloWorker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\lib\improbable\sdk\13.5.1\core-dynamic-linux64\libCoreSdkDll.so">
+    <Content Include="..\lib\improbable\sdk\13.7.0\core-dynamic-linux64\libCoreSdkDll.so">
       <Link>libCoreSdkDll.so</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\improbable\sdk\13.5.1\core-dynamic-macos64\libCoreSdkDll.dylib">
+    <Content Include="..\lib\improbable\sdk\13.7.0\core-dynamic-macos64\libCoreSdkDll.dylib">
       <Link>libCoreSdkDll.dylib</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\improbable\sdk\13.5.1\core-dynamic-win64\CoreSdkDll.dll">
+    <Content Include="..\lib\improbable\sdk\13.7.0\core-dynamic-win64\CoreSdkDll.dll">
       <Link>CoreSdkDll.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\improbable\sdk\13.5.1\core-dynamic-win64\CoreSdkDll.lib">
+    <Content Include="..\lib\improbable\sdk\13.7.0\core-dynamic-win64\CoreSdkDll.lib">
       <Link>CoreSdkDll.lib</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

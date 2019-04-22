@@ -50,5 +50,5 @@
   * Added a [FAQ section](migration-guide/faq.md).
   * Upgraded the deployment launch configuration to use the `small` template.
 * **29 Jan 2019:** Upgraded code examples to use `spatial alpha local launch`, `spatial alpha cloud upload` and `spatial alpha cloud launch`.
-* **22 Jan 2019:** Upgraded worker SDK version to `13.5.1`.
+* **22 Jan 2019:** Upgraded worker SDK version to `13.7.0`.
 * **21 Jan 2019:** Added an upload configuration to the client-worker.
