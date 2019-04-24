@@ -8,12 +8,11 @@ import demo.Pong;
 import improbable.worker.*;
 
 public class JavaWorker {
-	private static final int FRAMES_PER_SECOND = 60;
-
 	public static void main(String[] args) {
 		if (args.length > 0) {
-			Connection connection = getConnection(args[1], args[0], Integer.parseInt(args[1]));
+			Connection connection = getConnection(args[2], args[0], Integer.parseInt(args[1]));
 			Dispatcher dispatcher = new Dispatcher();
+			connection.sendLogMessage(LogLevel.INFO, "JavaWorker", "JavaWorker - Successfully connected using TCP and the Receptionist");
 			registerCallbacks(connection, dispatcher);
 			runEventLoop(connection, dispatcher);
 		} else {
@@ -35,7 +34,13 @@ public class JavaWorker {
 	private static java.util.List<Long> registerCallbacks(Connection connection, Dispatcher dispatcher) {
 		List<Long> callbackKeys = new ArrayList<Long>();
 
-		long callbackKey = dispatcher.onCommandRequest(PingResponder.Commands.PING, request -> {
+		long callbackKey;
+		callbackKey = dispatcher.onDisconnect(request -> {
+			System.out.println("Disconnected!");
+		});
+		callbackKeys.add(callbackKey);
+		
+		callbackKey = dispatcher.onCommandRequest(PingResponder.Commands.PING, request -> {
 			connection.sendLogMessage(LogLevel.INFO, "JavaWorker", "Received GetWorkerType command");
 			Pong pingResponse = new Pong("JavaWorker", "Hello from JavaWorker!");
 			connection.sendCommandResponse(PingResponder.Commands.PING, request.requestId, pingResponse);
@@ -46,21 +51,9 @@ public class JavaWorker {
 	}
 
 	private static void runEventLoop(Connection connection, Dispatcher dispatcher) {
-//		java.time.Duration maxWait = java.time.Duration.ofMillis(Math.round(1000.0 / FRAMES_PER_SECOND));
-		while (connection.isConnected()) {
-//			long startTime = System.nanoTime();
+		while (true) {
 			OpList opList = connection.getOpList(0 /* non-blocking */);
-			// Invoke callbacks.
 			dispatcher.process(opList);
-			// Do other work here...
-//			long stopTime = System.nanoTime();
-//			java.time.Duration waitFor = maxWait.minusNanos(stopTime - startTime);
-//			try {
-//				Thread.sleep(Math.max(waitFor.toMillis(), 0));
-//			} catch (InterruptedException e) {
-//				Thread.currentThread().interrupt();
-//				throw new RuntimeException(e);
-//			}
 		}
 	}
 

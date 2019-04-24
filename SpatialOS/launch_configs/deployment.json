@@ -9,13 +9,13 @@
       {
         "layer": "java",
         "hexGrid": {
-          "numWorkers": 1
+          "numWorkers": 2
         }
       },
       {
         "layer": "greetings",
         "hexGrid": {
-          "numWorkers": 1
+          "numWorkers": 2
         }
       }
     ]
